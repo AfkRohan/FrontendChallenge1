@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .book-item{
+            text-align:center;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: #E30512;
+        }
+        main{
+            padding: 0%;
+        }
+        #issue-6{
+            padding-bottom: 50px;
+        }
+        #issue-5{
+            padding-bottom: 50px;
+        }
+        #issue-4{
+            padding-bottom: 50px;
+        }
+        #issue-3{
+            padding-bottom: 50px;
+        }
+        #issue-2{
+            padding-bottom: 50px;
+        }
+        #issue-1{
+            padding-bottom: 50px;
+        }
+        #title{
+            padding-bottom: 50px;
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="title">Backstage books</h1>
+        <!-- Issue-1 -->
+        <section id="issue-1" class="book-item">
+            <a href="#issue-1" class="links">
+            <img src="img/backstagetalks_cover2016_n.png" alt="issue-1">
+            </a>
+            <p>Issue 1</p>
+            <p> Buy from <a href="#">Selected Location</a></p>
+        </section>
+        <!-- Issue-2 -->
+        <section id="issue-2" class="book-item">
+            <a href="#issue-2" class="links">
+            <img src="img/backstagetalks_cover2017.png" alt="issue-2">
+            </a>
+            <p>Issue 2</p>
+            <p> Buy from <a href="#">Selected Location</a></p>
+        </section>
+        <!-- Issue-3 -->
+        <section id="issue-3" class="book-item">
+            <a href="#issue-3" class="links">
+            <img src="img/backstagetalks_cover_issue_3.png" alt="issue-3">
+            </a>
+            <p>Issue 3</p>
+            <p> Buy from <a href="#">Selected Location</a></p>
+        </section>
+        <!-- Issue-4 -->
+        <section id="issue-4" class="book-item">
+            <a href="#issue-4" class="links">
+            <img src="img/backstagetalks_cover_issue_4.png" alt="issue-4">
+            </a>
+            <p>Issue 4</p>
+            <p> Buy from <a href="#">Selected Location</a></p>
+        </section>
+        <!-- Issue-5 -->
+        <section id="issue-5" class="book-item">
+            <a href="#issue-5" class="links">
+            <img src="img/backstagetalks_cover_issue_5.png" alt="issue-5">
+            </a>
+            <p>Issue 5</p>
+            <p> Buy from <a href="#">Selected Location</a></p>
+        </section>
+        <!-- Issue-6 -->
+        <section id="issue-6" class="book-item">
+            <a href="#issue-6" class="links">
+            <img src="img/backstagetalks_cover_issue_6.png" alt="issue-6">
+            </a>
+            <p>Issue 6</p>
+            <p> Buy from <a href="#"> Selected Location</a></p>
+        </section>
+    </main>
+    <script>
+        'use strict';
+
+        let bgtoidmap = {
+                issue1:"#E30512",
+                issue2: "#1D3FBB",
+                issue3: "#FFBE00",
+                issue4: "#FF6519",
+                issue5: "#00C1B5",
+                issue6: "white"
+        }
+        document.body.addEventListener("scroll", onscroll);
+
+        onscroll = (event) => {        
+            // 1
+            if(window.scrollY<document.getElementById("issue-2").offsetTop)
+                document.body.style.backgroundColor="#E30512";                
+            // 2
+            else if(window.scrollY<document.getElementById("issue-3").offsetTop)
+                document.body.style.backgroundColor="#1D3FBB";
+            // 3
+            else if(window.scrollY<document.getElementById("issue-4").offsetTop)
+                document.body.style.backgroundColor="#FFBE00";
+            // 4
+            else if(window.scrollY<document.getElementById("issue-5").offsetTop)
+                document.body.style.backgroundColor="#FF6519";
+            // 5
+            else if(window.scrollY<document.getElementById("issue-6").offsetTop)
+                document.body.style.backgroundColor="#00C1B5";
+            // 6
+            else
+                document.body.style.backgroundColor="white";
+        };
+    </script>
+</body>
+</html>
